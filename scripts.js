@@ -1,6 +1,12 @@
 function operate(){
-    let a=prompt("enter a number");
-    let b=prompt("enter operation");
+    let a="";
+    let x= document.querySelectorAll(".num").forEach(function(tap){
+        tap.addEventListener("click",function(event){
+        a+=event.target.innerHTML;
+        document.getElementById("prim").innerHTML=a;
+        })
+    })
+    
     if(b==="+"){
         addition(a);
     }
